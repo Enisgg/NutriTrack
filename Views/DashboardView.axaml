@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        x:Class="AvaloniaApplication1.Views.DashboardView"
+        x:DataType="vm:DashboardViewModel"
+        Title="Dashboard">
+
+    <Design.DataContext>
+        <vm:DashboardViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Dashboard"
+                   FontSize="24"/>
+
+        <TextBlock Text="{Binding TotalCalories,
+                          StringFormat='Calories: {0}'}"/>
+
+        <TextBlock Text="{Binding TotalProtein,
+                          StringFormat='Protein: {0} g'}"/>
+
+        <TextBlock Text="{Binding TotalCarbs,
+                          StringFormat='Carbs: {0} g'}"/>
+
+        <TextBlock Text="{Binding TotalFat,
+                          StringFormat='Fat: {0} g'}"/>
+
+        <TextBlock Text="{Binding CalorieGoal,
+                  StringFormat='Goal: {0} kcal'}"/>
+
+        <TextBlock Text="{Binding CaloriesRemaining,
+                  StringFormat='Remaining: {0} kcal'}"/>
+
+    </StackPanel>
+
+</Window>

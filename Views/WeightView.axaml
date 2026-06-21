@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        x:Class="AvaloniaApplication1.Views.WeightView"
+        x:DataType="vm:WeightViewModel"
+        Title="Weight Tracker">
+
+    <Design.DataContext>
+        <vm:WeightViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Weight Tracker"
+                   FontSize="24"/>
+
+        <TextBox Text="{Binding CurrentWeight}"
+                 PlaceholderText="Current Weight"/>
+
+        <Button Content="Save Weight"
+                Command="{Binding SaveWeightCommand}"/>
+
+        <ListBox ItemsSource="{Binding Weights}">
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <StackPanel Orientation="Horizontal" Spacing="20">
+
+                <TextBlock Text="{Binding Date}" Width="200"/>
+
+                <TextBlock Text="{Binding Weight,
+                                  StringFormat='{}{0} kg'}"/>
+
+            </StackPanel>
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+
+    </StackPanel>
+
+</Window>

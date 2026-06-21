@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="NutriTrack Menu"
+        Width="400"
+        Height="300">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="15">
+
+        <TextBlock Text="NutriTrack"
+                   FontSize="28"/>
+
+        <Button Content="User Profile"
+                Command="{Binding OpenUserViewCommand}"/>
+
+        <Button Content="Meals"
+                Command="{Binding OpenMealViewCommand}"/>
+
+        <Button Content="Dashboard"
+                Command="{Binding OpenDashboardViewCommand}"/>
+
+        <Button Content="Weight Tracker"
+                Command="{Binding OpenWeightViewCommand}"/>
+
+    </StackPanel>
+
+</Window>

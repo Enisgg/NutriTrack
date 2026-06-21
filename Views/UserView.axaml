@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.UserView"
+        x:DataType="vm:UserViewModel"
+        Title="NutriTrack">
+
+    <Design.DataContext>
+        <vm:UserViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="NutriTrack"
+                   FontSize="24"/>
+
+      <TextBox Text="{Binding Name}"
+         PlaceholderText="Name"/>
+
+         <TextBox Text="{Binding Weight}"
+         PlaceholderText="Weight"/>
+
+         <TextBox Text="{Binding Height}"
+         PlaceholderText="Height"/>
+
+         <TextBox Text="{Binding Sex}"
+         PlaceholderText="Sex"/>
+
+         <TextBox Text="{Binding Goal}"
+         PlaceholderText="Goal"/>
+
+        <Button Content="Save User"
+        Command="{Binding SaveUserCommand}"/>
+        <TextBlock Text="{Binding StatusMessage}" />
+
+    </StackPanel>
+
+</Window>

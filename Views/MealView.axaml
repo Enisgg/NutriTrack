@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MealView"
+       x:DataType="vm:MealViewModel"
+        Title="NutriTrack">
+
+    <Design.DataContext>
+        <vm:MealViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="NutriTrack"
+                   FontSize="24"/>
+<TextBox Text="{Binding MealName}"
+         PlaceholderText="Meal Name"/>
+
+<TextBox Text="{Binding Calories}"
+         PlaceholderText="Calories"/>
+
+<TextBox Text="{Binding Protein}"
+         PlaceholderText="Protein"/>
+
+<TextBox Text="{Binding Carbs}"
+         PlaceholderText="Carbs"/>
+
+<TextBox Text="{Binding Fat}"
+         PlaceholderText="Fat"/>
+
+        <Button Content="Save Meal"
+        Command="{Binding SaveMealCommand}"/>
+
+        <TextBlock Text="{Binding StatusMessage}"/>
+<ListBox ItemsSource="{Binding Meals}">
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="10">
+
+                <TextBlock Text="{Binding Name}" Width="120"/>
+
+                <TextBlock Text="{Binding Calories}" Width="80"/>
+
+                <Button Content="Delete"
+                        Command="{Binding $parent[Window].DataContext.DeleteMealCommand}"
+                        CommandParameter="{Binding}" />
+
+            </StackPanel>
+
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+
+    </StackPanel>
+
+</Window>
