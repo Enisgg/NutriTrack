@@ -111,23 +111,28 @@ Views/
 
 ### Main Menu
 
-(Add screenshot here)
+<img width="1470" height="956" alt="Screenshot 2026-06-24 at 10 32 37" src="https://github.com/user-attachments/assets/d59c48c2-9ef1-4473-af04-96633c878977" />
+
 
 ### User Profile
 
-(Add screenshot here)
+<img width="1470" height="956" alt="Screenshot 2026-06-24 at 10 32 56" src="https://github.com/user-attachments/assets/95934d4a-f251-45cc-8526-d15b36fac966" />
+
 
 ### Meal Tracking
 
-(Add screenshot here)
+<img width="1470" height="956" alt="Screenshot 2026-06-24 at 10 33 01" src="https://github.com/user-attachments/assets/3c267100-b0c4-4e4d-b17b-f32ebddee09b" />
+
 
 ### Weight Tracking
 
-(Add screenshot here)
+<img width="1470" height="956" alt="Screenshot 2026-06-24 at 10 33 10" src="https://github.com/user-attachments/assets/8de08b9b-57f1-4e3b-8787-f915d0708764" />
+
 
 ### Dashboard
 
-(Add screenshot here)
+<img width="1470" height="956" alt="Screenshot 2026-06-24 at 10 33 06" src="https://github.com/user-attachments/assets/290b3232-242d-4fb6-b6a2-2e655fa84751" />
+
 
 ---
 
